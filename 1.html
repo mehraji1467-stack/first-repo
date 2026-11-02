@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping App Flow</title>
+  <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex flex-wrap items-center justify-center gap-8 min-h-screen p-6 font-sans">
+
+  <!-- ==================== SCREEN 1: MATCH YOUR STYLE ==================== -->
+  <div class="w-[360px] h-[760px] bg-[#FFF5F5] text-gray-800 shadow-2xl rounded-[40px] overflow-hidden flex flex-col relative border border-gray-100">
+    <!-- Header -->
+    <div class="flex justify-between items-center px-6 pt-6 pb-2">
+      <button class="w-9 h-9 bg-white rounded-xl flex flex-wrap items-center justify-center p-2 gap-0.5 shadow-sm">
+        <span class="w-1.5 h-1.5 bg-red-400 rounded-sm"></span>
+        <span class="w-1.5 h-1.5 bg-red-400 rounded-sm"></span>
+        <span class="w-1.5 h-1.5 bg-red-400 rounded-sm"></span>
+        <span class="w-1.5 h-1.5 bg-red-400 rounded-sm"></span>
+      </button>
+      <img src="https://unsplash.com" alt="Avatar" class="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm">
+    </div>
+
+    <!-- Body Content -->
+    <div class="flex-1 px-6 space-y-4 overflow-y-auto pb-16">
+      <h1 class="text-xl font-bold text-gray-800">Match Your Style</h1>
+      
+      <!-- Search -->
+      <div class="bg-white rounded-xl flex items-center px-3 py-2 shadow-sm text-gray-400">
+        <svg xmlns="http://w3.org" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <span class="text-xs">Search</span>
+      </div>
+
+      <!-- Categories -->
+      <div class="flex gap-2 text-[11px] font-semibold">
+        <span class="bg-[#E06666] text-white px-3 py-1.5 rounded-lg shadow-sm">Trending Now</span>
+        <span class="bg-white text-gray-400 px-3 py-1.5 rounded-lg border border-gray-100">All</span>
+        <span class="bg-white text-gray-400 px-3 py-1.5 rounded-lg border border-gray-100">New</span>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Item 1 -->
+        <div class="space-y-1">
+          <div class="relative bg-white rounded-2xl overflow-hidden aspect-[4/5] shadow-sm">
+            <img src="https://unsplash.com" class="w-full h-full object-cover" alt="Jacket">
+            <span class="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-red-400 text-xs shadow">♥</span>
+          </div>
+          <p class="text-xs font-bold text-gray-700">Jacket Jeans</p>
+          <p class="text-[10px] text-gray-400 font-medium">$45.9</p>
+        </div>
+        <!-- Item 2 -->
+        <div class="space-y-1">
+          <div class="relative bg-white rounded-2xl overflow-hidden aspect-[4/5] shadow-sm">
+            <img src="https://unsplash.com" class="w-full h-full object-cover" alt="Sweater">
+            <span class="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-gray-300 text-xs shadow">♥</span>
+          </div>
+          <p class="text-xs font-bold text-gray-700">Acrylic Sweater</p>
+          <p class="text-[10px] text-gray-400 font-medium">$37.9</p>
+        </div>
+        <!-- Item 3 -->
+        <div class="space-y-1">
+          <div class="relative bg-white rounded-2xl overflow-hidden aspect-[4/5] shadow-sm">
+            <img src="https://unsplash.com" class="w-full h-full object-cover" alt="Leather">
+            <span class="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-red-400 text-xs shadow">♥</span>
+          </div>
+          <p class="text-xs font-bold text-gray-700">Leather Jacket</p>
+          <p class="text-[10px] text-gray-400 font-medium">$54.9</p>
+        </div>
+        <!-- Item 4 -->
+        <div class="space-y-1">
+          <div class="relative bg-white rounded-2xl overflow-hidden aspect-[4/5] shadow-sm">
+            <img src="https://unsplash.com" class="w-full h-full object-cover" alt="Coat">
+            <span class="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-gray-300 text-xs shadow">♥</span>
+          </div>
+          <p class="text-xs font-bold text-gray-700">Winter Coat</p>
+          <p class="text-[10px] text-gray-400 font-medium">$65.9</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Footer -->
+    <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 py-3 px-8 flex justify-between rounded-t-[24px] shadow-lg text-gray-300">
+      <span class="text-[#E06666] font-bold cursor-pointer">🏠</span>
+      <span class="cursor-pointer">📋</span>
+      <span class="cursor-pointer">🛒</span>
+      <span class="cursor-pointer">👤</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCREEN 2: PRODUCT DETAIL ==================== -->
+  <div class="w-[360px] h-[760px] bg-[#FFF5F5] text-gray-800 shadow-2xl rounded-[40px] overflow-hidden flex flex-col relative border border-gray-100">
+    <!-- Header -->
+    <div class="flex justify-between items-center px-6 pt-6 pb-2">
+      <button class="w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-600 shadow-sm">
+        <svg xmlns="http://w3.org" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <img src="https://unsplash.com" alt="Avatar" class="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm">
+    </div>
+
+    <!-- Product Image Workspace -->
+    <div class="flex-1 px-6 space-y-4 overflow-y-auto pb-6">
+      <div class="w-full aspect-[1.1] rounded-3xl overflow-hidden shadow-md">
+        <img src="https://unsplash.com" class="w-full h-full object-cover" alt="Winter Coat Big">
+      </div>
+
+      <!-- Title Row -->
+      <div class="flex justify-between items-start">
+        <div>
+          <h2 class="text-lg font-bold text-gray-800">Winter Coat</h2>
+          <p class="text-xs text-gray-400 mt-1">Size</p>
+        </div>
+        <p class="text-base font-bold text-gray-800">$65.9</p>
+      </div>
+
+      <!-- Sizes Tags -->
+      <div class="flex gap-2 text-xs font-semibold text-gray-500">
+        <span class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm border border-gray-100">S</span>
+        <span class="w-7 h-7 bg-[#E06666] text-white rounded-lg flex items-center justify-center shadow-sm">M</span>
+        <span class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm border border-gray-100">L</span>
+        <span class="w-7 h-7 bg-white rounded-lg flex items-center justify-center shadow-sm border border-gray-100">XL</span>
+      </div>
+
+      <!-- Colors Layout Selection -->
+      <div class="space-y-1">
+        <p class="text-xs text-gray-400">Colors</p>
+        <div class="flex gap-2 items-center pt-1">
+          <span class="w-5 h-5 rounded-full bg-[#6FA8DC] ring-2 ring-offset-2 ring-[#6FA8DC]"></span>
+          <span class="w-5 h-5 rounded-full bg-[#EA9999]"></span>
+          <span class="w-5 h-5 rounded-full bg-[#3D5A80]"></span>
+          <span class="w-5 h-5 rounded-full bg-[#3F5E4D]"></span>
+          <span class="w-5 h-5 rounded-full bg-[#2D2D2D]"></span>
+        </div>
+      </div>
+
+      <!-- Main Action Call -->
+      <button class="w-full bg-[#E06666] text-white py-3.5 rounded-2xl font-bold tracking-wide text-sm shadow-md mt-4">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCREEN 3: MY CART ==================== -->
+  <div class="w-[360px] h-[760px] bg-[#FFF5F5] text-gray-800 shadow-2xl rounded-[40px] overflow-hidden flex flex-col relative border border-gray-100">
+    <!-- Header -->
+    <div class="flex justify-between items-center px-6 pt-6 pb-2">
+      <button class="w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-600 shadow-sm">
+        <svg xmlns="http://w3.org" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <h1 class="text-base font-bold text-gray-800">My Cart</h1>
+      <img src="https://unsplash.com" alt="Avatar" class="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm">
+    </div>
+
+    <!-- Cart Layout Grid rows -->
+    <div class="flex-1 px-6 space-y-4 pt-2 overflow-y-auto">
+      <!-- Item row 1 -->
+      <div class="flex items-center justify-between bg-transparent">
+        <div class="flex items-center space-x-3">
+          <img src="https://unsplash.com" class="w-14 h-14 object-cover rounded-xl shadow-sm" alt="Cart 1">
+          <div>
+            <h4 class="text-xs font-bold text-gray-800">Jacket Jeans</h4>
+            <p class="text-[11px] text-gray-400 font-medium">$37.9</p>
+            <div class="flex items-center space-x-1.5 mt-1">
+              <span class="w-4 h-4 rounded-full bg-[#6FA8DC]"></span>
+              <span class="text-[9px] font-bold px-1 bg-white border border-gray-100 rounded text-gray-500">L</span>
+            </div>
+          </div>
+        </div>
+        <button class="text-red-300">🗑</button>
+      </div>
+
+      <!-- Item row 2 -->
+      <div class="flex items-center justify-between bg-transparent">
+
+
+      </body>
+      </html>
